@@ -21,20 +21,17 @@
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("Ошибка ввода! Введено не число!");
-                    interfaceConsole.ConsoleEnd();
+                    interfaceConsole.ClearAndText("Ошибка ввода! Введено не число!\n");
                     continue;
                 }
                 catch (StackOverflowException)
                 {
-                    Console.WriteLine("Ошибка ввода! Введено слишком маленькое или слишком большое число!");
-                    interfaceConsole.ConsoleEnd();
+                    interfaceConsole.ClearAndText("Ошибка ввода! Введено слишком маленькое или слишком большое число!\n");
                     continue;
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Неизвестная ошибка!");
-                    interfaceConsole.ConsoleEnd();
+                    interfaceConsole.ClearAndText("Ошибка ввода! Введено слишком маленькое или слишком большое число!\n");
                     continue;
                 }
 
@@ -42,7 +39,6 @@
                 {
                     case 0:
                         Console.Clear();
-                        interfaceConsole.ConsoleEnd();
                         return 0;
 
                     case 1:
@@ -51,9 +47,7 @@
                         break;
 
                     default:
-                        Console.Clear();
-                        Console.WriteLine("Нет такой операции");
-                        interfaceConsole.ConsoleEnd();
+                        interfaceConsole.ClearAndText("Нет такой операции!\n");
                         break;
                 }
             }
