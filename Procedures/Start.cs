@@ -6,6 +6,7 @@
         {
             Procedures.Sys.InterfaceConsole interfaceConsole = new Procedures.Sys.InterfaceConsole();
             Procedures.Games.TagGameClass tagGameClass = new Procedures.Games.TagGameClass();
+            Procedures.Games.StoneCutterPaper stoneCutterPaper = new Procedures.Games.StoneCutterPaper();
 
             int i = -1;
             while (true)
@@ -13,8 +14,10 @@
                 try
                 {
                     Console.WriteLine("Выберите программу: ");
+                    Console.WriteLine("-1 - Отладка");
                     Console.WriteLine("0 - Выход");
                     Console.WriteLine("1 - Пятнашки");
+                    Console.WriteLine("2 - Камень, ножницы, бумага");
 
                     Console.Write("\nВводите - ");
                     i = Convert.ToInt32(Console.ReadLine());
@@ -44,6 +47,11 @@
                     case 1:
                         Console.Clear();
                         tagGameClass.TagGameMain();
+                        break;
+
+                    case 2:
+                        Console.Clear();
+                        stoneCutterPaper.StoneCutterPaperMain();
                         break;
 
                     default:
